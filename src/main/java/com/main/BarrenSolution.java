@@ -39,7 +39,8 @@ public class BarrenSolution {
             input = input.replaceAll("\"", "");
             
             List<Integer> result = getFertileLand(input.split(","));
-            result.forEach(item->System.out.print(item + " "));
+            if(result!=null)
+            	result.forEach(item->System.out.print(item + " "));
 			System.out.println();
             System.out.println("-----------\n");
         }
@@ -130,7 +131,7 @@ public class BarrenSolution {
 			Collections.sort(result);
 			return result;			
 
-		} catch (NumberFormatException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			System.out.println("Enter information only in the specified format");
 		}
